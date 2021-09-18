@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "error",
+    "brace-style": ["error", "1tbs"],
+    "curly": "error",
+    "eol-last": ["error", "always"],
+    "eqeqeq": "error",
+    "guard-for-in": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true, "overrides": { "catch": { "after": false } } }],
+    "linebreak-style": ["error", "unix"],
+    "no-unused-labels": "error",
+    "no-caller": "error",
+    "no-new-wrappers": "error",
+    "no-eval": "error",
+    "no-trailing-spaces": "error",
+    "prefer-const": "warn",
+    "radix": "error",
+    "semi": ["error", "always"],
+
+    "@typescript-eslint/naming-convention": ["warn", { "selector": "class", "format": ["PascalCase"] }],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-namespace": "error",
+    "@typescript-eslint/no-redeclare": "error"
+  }
+}

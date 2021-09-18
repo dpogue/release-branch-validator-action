@@ -1,0 +1,36 @@
+{
+  "name": "Release Branch Validator",
+  "description": "GitHub Action to validate that a pull request is opened against the right branch based on branch mappings from the PR's referenced Jira issue labels.",
+  "author": "Darryl Pogue",
+
+  "inputs": {
+    "repo-token": {
+      "description": "Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.",
+      "default": "${{ github.token }}",
+      "required": false
+    },
+    "configuration-path": {
+      "description": "The path for the release branch mapping configuration file.",
+      "default": ".github/release-branches.yml",
+      "required": false
+    },
+    "jira-endpoint": {
+      "description": "The URL endpoint for the Jira instance.",
+      "required": true
+    },
+    "jira-token": {
+      "description": "An authentication token for the Jira endpoint.",
+      "required": true
+    },
+    "strict": {
+      "description": "Whether to add a failing check when problems are found, or just add warning comments to the pull request.",
+      "default": false,
+      "required": false
+    }
+  },
+
+  "runs": {
+    "using": "node12",
+    "main": "dist/index.js"
+  }
+}

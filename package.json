@@ -1,0 +1,35 @@
+{
+  "name": "release-branch-validator-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to validate that a pull request is opened against the right branch based on branch mappings from the PR's referenced Jira issue labels.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && ncc build dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpogue/release-branch-validator-action.git"
+  },
+  "author": "Darryl Pogue <darryl@ayogo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dpogue/release-branch-validator-action/issues"
+  },
+  "homepage": "https://github.com/dpogue/release-branch-validator-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "@actions/github": "^5.0.0",
+    "@actions/http-client": "^1.0.11",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.3",
+    "@types/node": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "@vercel/ncc": "^0.31.1",
+    "eslint": "^7.0.0",
+    "typescript": "^4.4.3"
+  }
+}
