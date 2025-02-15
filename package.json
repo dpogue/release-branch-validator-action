@@ -19,7 +19,7 @@
   "homepage": "https://github.com/dpogue/release-branch-validator-action#readme",
   "dependencies": {
     "@actions/core": "^1.9.1",
-    "@actions/github": "^5.0.0",
+    "@actions/github": "^6.0.0",
     "@actions/http-client": "^1.0.11",
     "js-yaml": "^4.1.0"
   },
